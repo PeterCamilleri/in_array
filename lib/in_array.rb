@@ -8,8 +8,8 @@ class BasicObject
   end
 end
 
-#A mixinable module to be included in class that already holds data in_array.
-module InArrayable
+#A mixin module to be included in any class that already holds data in_array.
+module InArrayAlready
   #Return the object in an array. Already is!
   def in_array
     self
@@ -18,5 +18,5 @@ end
 
 #Arrays already have their data in_array.
 class Array
-  include InArrayable
+  include InArrayAlready
 end

@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name = "in_array"
   s.summary = "Encapsulate data in an array unless it's already in one."
   s.description = "Encapsulate data in an array unless it's already in one. "
-  s.version = '0.0.1' 
+  s.version = '0.1.1' 
   s.author = ["Peter Camilleri"]
   s.email = "peter.c.camilleri@gmail.com"
   s.homepage = "http://teuthida-technologies.com/"
