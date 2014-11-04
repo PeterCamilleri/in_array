@@ -6,3 +6,6 @@ encapsulates the object in an array unless it is already an array. So
   ['Hello'].in_array  ====> ['Hello']
   my_object.in_array  ====> [my_object]
   [1,2,3].in_array    ====> [1,2,3]
+
+While not a terribly useful gem, it does demonstrate the use of inheritance
+and true as opposed to simulated polymorphism.
