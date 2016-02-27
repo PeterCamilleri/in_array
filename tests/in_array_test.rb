@@ -1,19 +1,12 @@
 require_relative '../lib/in_array'
+gem              'minitest'
 require          'minitest/autorun'
+require          'minitest_visible'
 
-class InArrayTester < MiniTest::Unit::TestCase
-  $do_this_only_one_time = "" unless defined? $do_this_only_one_time
-  
-  def initialize(*all)
-    if $do_this_only_one_time != __FILE__
-      puts
-      puts "Running test file: #{File.split(__FILE__)[1]}" 
-      $do_this_only_one_time = __FILE__
-    end
-    
-    super(*all)
-  end
-  
+class InArrayTester < Minitest::Test
+  #Track mini-test progress.
+  include MinitestVisible
+
   def test_that_it_encapsulates_in_arrays
     assert_equal(nil.in_array, [nil])
     assert_equal('Hello'.in_array, ['Hello'])
