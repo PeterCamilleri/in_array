@@ -55,8 +55,8 @@ my_object.in_array.each do |option| #etc, etc, etc...
 
 instead of
 ```ruby
-    my_object = [my_object] unless my_object.is_a?(Array)
-    my_object.each do |option| #etc, etc, etc...
+my_object = [my_object] unless my_object.is_a?(Array)
+my_object.each do |option| #etc, etc, etc...
 ```
 
 #### Extending the Protocol
