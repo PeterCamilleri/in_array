@@ -2,3 +2,5 @@ rdoc/
 *.gem
 *.zip
 *.tmp
+pkg
+Gemfile.lock
