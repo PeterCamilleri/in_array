@@ -7,6 +7,13 @@ class InArrayTester < Minitest::Test
   #Track mini-test progress.
   include MinitestVisible
 
+  def test_the_basics
+    assert(InArray, "The module InArray should exist.")
+    assert(InArrayAlready, "The module InArrayAlready should exist.")
+
+    assert_equal(String, InArray::VERSION.class)
+  end
+
   def test_that_it_encapsulates_in_arrays
     assert_equal(nil.in_array, [nil])
     assert_equal('Hello'.in_array, ['Hello'])
