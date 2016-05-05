@@ -41,6 +41,7 @@ Or install it yourself as:
 
     $ gem install in_array
 
+The in_array gem itself is found at: ( https://rubygems.org/gems/in_array )
 
 ## Usage
 This is as simple as:
