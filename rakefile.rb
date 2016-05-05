@@ -24,6 +24,11 @@ task :reek do |t|
   `reek lib\\*.rb > reek.txt`
 end
 
+desc "Fire up an IRB session with in_array preloaded."
+task :console do
+  system "ruby irbt.rb local"
+end
+
 desc "What version of in_array is this?"
 task :vers do |t|
   puts
