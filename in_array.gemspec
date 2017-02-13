@@ -13,16 +13,16 @@ Gem::Specification.new do |s|
   s.version = InArray::VERSION
   s.author = ["Peter Camilleri"]
   s.email = "peter.c.camilleri@gmail.com"
-  s.homepage = "http://teuthida-technologies.com/"
+  s.homepage = "https://github.com/PeterCamilleri/in_array"
   s.platform = Gem::Platform::RUBY
   s.required_ruby_version = '>=1.9.3'
 
-  s.add_development_dependency 'minitest_visible', ">= 0.1.0"
   s.add_development_dependency "bundler", "~> 1.3"
   s.add_development_dependency 'rake'
-  s.add_development_dependency 'reek', "~> 1.3.8"
-  s.add_development_dependency 'minitest', "~> 4.7.5"
-  s.add_development_dependency 'rdoc', "~> 4.0.1"
+  s.add_development_dependency 'minitest', "~> 5.7"
+  s.add_development_dependency 'minitest_visible', "~> 0.1"
+  s.add_development_dependency 'reek', "~> 4.5"
+  s.add_development_dependency 'rdoc', "~> 5.0"
 
   s.files       = `git ls-files`.split($/)
   s.extra_rdoc_files = ['license.txt']
