@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'minitest', "~> 5.7"
   s.add_development_dependency 'minitest_visible', "~> 0.1"
-  s.add_development_dependency 'reek', "~> 4.5"
+  s.add_development_dependency 'reek', "~> 5.0.2"
   s.add_development_dependency 'rdoc', "~> 5.0"
 
   s.files       = `git ls-files`.split($/)
