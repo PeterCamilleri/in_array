@@ -3,5 +3,5 @@
 #* version.rb - The version string for flex array.
 module InArray
   #The version string for flex array.
-  VERSION = "0.1.8"
+  VERSION = "1.0.0"
 end
