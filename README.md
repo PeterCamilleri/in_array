@@ -82,49 +82,50 @@ penalty. The benchmark tests that follow show that the in_array gem should be
 expected to improve performance when compared with the simulated polymorphism
 alternative.
 
+All benchmarks were done with:
+    ruby 2.3.3p222 (2016-11-21 revision 56859) [i386-mingw32]
+
 The first test assumes a simple scenario with only the Array class. Polymorphism
 is simulated using the is_a? method:
 
-    C:\Sites\in_array>ruby bench\simple_bench.rb
     Warming up --------------------------------------
     Process with in_array
-                             5.178k i/100ms
+                             5.332k i/100ms
     Process with is_a?
-                             4.037k i/100ms
+                             4.084k i/100ms
     Calculating -------------------------------------
     Process with in_array
-                             54.001k (± 5.4%) i/s -    274.434k
+                             60.573k (± 0.2%) i/s -    303.924k in   5.017537s
     Process with is_a?
-                             41.897k (± 5.3%) i/s -    209.924k
+                             45.736k (± 0.2%) i/s -    228.704k in   5.000545s
 
     Comparison:
-    Process with in_array:    54000.9 i/s
-    Process with is_a?   :    41897.1 i/s - 1.29x slower
+    Process with in_array:    60572.6 i/s
+    Process with is_a?   :    45736.0 i/s - 1.32x  slower
 
 The second scenario adds a user defined array like class. In this case, two
 methods of simulated polymorphism are tested, based on include? and a hash
 of allowed array classes. Here are those results.
 
-    C:\Sites\in_array>ruby bench\complex_bench.rb
     Warming up --------------------------------------
     Process with in_array
-                             5.163k i/100ms
+                             5.334k i/100ms
     Process with hash[]
-                             1.779k i/100ms
+                             1.565k i/100ms
     Process with include?
-                             1.895k i/100ms
+                             2.656k i/100ms
     Calculating -------------------------------------
     Process with in_array
-                             54.239k (± 5.3%) i/s -    273.639k
+                             60.959k (± 0.3%) i/s -    309.372k in   5.075113s
     Process with hash[]
-                             17.924k (± 3.2%) i/s -     90.729k
+                             16.323k (± 0.7%) i/s -     82.945k in   5.081691s
     Process with include?
-                             19.232k (± 3.8%) i/s -     96.645k
+                             28.529k (± 0.2%) i/s -    143.424k in   5.027394s
 
     Comparison:
-    Process with in_array:    54238.6 i/s
-    Process with include?:    19231.7 i/s - 2.82x slower
-    Process with hash[]  :    17923.9 i/s - 3.03x slower
+    Process with in_array:    60959.3 i/s
+    Process with include?:    28528.6 i/s - 2.14x  slower
+    Process with hash[]  :    16323.1 i/s - 3.73x  slower
 
 ## Contributing
 
