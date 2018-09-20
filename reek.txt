@@ -1,1 +1,1 @@
-lib/in_array.rb -- 0 warnings
+0 total warnings

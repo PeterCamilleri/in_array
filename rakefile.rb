@@ -21,7 +21,7 @@ end
 
 desc "Run a scan for smelly code!"
 task :reek do |t|
-  `reek lib\\*.rb > reek.txt`
+  `reek --no-color lib > reek.txt`
 end
 
 desc "Fire up an IRB session with in_array preloaded."
