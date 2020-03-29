@@ -1,7 +1,6 @@
 require_relative '../lib/in_array'
 gem              'minitest'
 require          'minitest/autorun'
-require          'minitest_visible'
 
 class MyArray
   include InArrayAlready
@@ -13,8 +12,6 @@ class NotAnArray
 end
 
 class InArrayTester < Minitest::Test
-  #Track mini-test progress.
-  include MinitestVisible
 
   def test_the_basics
     assert(InArray, "The module InArray should exist.")
