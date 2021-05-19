@@ -28,7 +28,6 @@ Gem::Specification.new do |s|
   s.test_files = ['tests/in_array_test.rb']
 
   s.license = 'MIT'
-  s.has_rdoc = true
   s.require_path = 'lib'
 end
 
